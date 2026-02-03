@@ -45,7 +45,7 @@
       "priority": "medium",
       "createdAt": "2026-02-03T10:23:04.831Z",
       "status": "done",
-      "sortOrder": 0,
+      "sortOrder": 1,
       "processingStartedAt": null,
       "processing": null,
       "completedAt": "2026-02-03T13:04:27.253Z"
@@ -61,8 +61,11 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T13:30:33.664Z",
-      "status": "in_progress",
-      "sortOrder": 0
+      "status": "done",
+      "sortOrder": 2,
+      "completedAt": "2026-02-03T13:51:36.780Z",
+      "processingStartedAt": null,
+      "processing": null
     }
   ],
   "projects": [
@@ -80,8 +83,16 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T13:30:54.953Z",
+  "lastUpdated": "2026-02-03T13:51:36.780Z",
   "activities": [
+    {
+      "type": "moved",
+      "actor": "michsindlinger",
+      "task": "testnachricht 3",
+      "from": "in_progress",
+      "to": "done",
+      "time": "just now"
+    },
     {
       "type": "moved",
       "actor": "michsindlinger",
