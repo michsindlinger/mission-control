@@ -115,9 +115,9 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T14:08:56.982Z",
-      "status": "review",
+      "status": "done",
       "sortOrder": 0,
-      "completedAt": "2026-02-03T15:09:00Z",
+      "completedAt": "2026-02-03T14:10:55.691Z",
       "comments": [
         {
           "author": "Gandalf",
@@ -142,7 +142,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T15:09:00Z",
+  "lastUpdated": "2026-02-03T14:10:55.691Z",
   "activities": [
     {
       "type": "moved",
