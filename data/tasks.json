@@ -1,13 +1,7 @@
 {
   "tasks": [],
   "projects": [
-    "default",
-    {
-      "id": "http://localhost:18789",
-      "name": "HR Management",
-      "icon": "💰",
-      "color": "#6366f1"
-    }
+    "default"
   ],
   "lastUpdated": "2026-02-02T21:11:18Z"
 }
