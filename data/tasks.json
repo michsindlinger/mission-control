@@ -7,6 +7,12 @@
       "name": "HR Management",
       "icon": "💰",
       "color": "#6366f1"
+    },
+    {
+      "id": "privat",
+      "name": "Privat",
+      "icon": "🏠",
+      "color": "#3af259"
     }
   ],
   "lastUpdated": "2026-02-02T21:11:18Z"
