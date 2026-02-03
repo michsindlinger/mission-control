@@ -103,6 +103,19 @@
           "timestamp": "2026-02-03T14:04:33Z"
         }
       ]
+    },
+    {
+      "id": "task_1770127736982",
+      "title": "testnachricht 7",
+      "description": "Schicke mir in Slack eine Nachricht \"Finaler test\"",
+      "project": "",
+      "tags": [
+        ""
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-02-03T14:08:56.982Z",
+      "status": "backlog"
     }
   ],
   "projects": [
@@ -120,7 +133,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T14:04:33Z",
+  "lastUpdated": "2026-02-03T14:08:56.982Z",
   "activities": [
     {
       "type": "moved",
