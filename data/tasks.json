@@ -13,7 +13,10 @@
       "createdAt": "2026-02-03T10:13:57.907Z",
       "isTemplate": true,
       "baseStatus": "backlog",
-      "executionCount": 0
+      "executionCount": 0,
+      "archived": true,
+      "archivedAt": "2026-02-03T10:15:51.222Z",
+      "archivedReason": "Converted to cron: fc319b01-f5b0-4d1e-95b2-5c770e6b37b5"
     }
   ],
   "projects": [
