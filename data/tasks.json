@@ -29,8 +29,9 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T10:22:39.272Z",
-      "status": "in_progress",
-      "sortOrder": 0
+      "status": "done",
+      "sortOrder": 0,
+      "completedAt": "2026-02-03T13:08:26Z"
     },
     {
       "id": "task_1770114184831",
