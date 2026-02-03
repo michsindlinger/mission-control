@@ -30,6 +30,19 @@
       "priority": "medium",
       "createdAt": "2026-02-03T10:22:39.272Z",
       "status": "backlog"
+    },
+    {
+      "id": "task_1770114184831",
+      "title": "tes slack nachricht",
+      "description": "Schicke mir in Slack eine Nachricht \"Hallo Mich\"",
+      "project": "hr-management",
+      "tags": [
+        "hr-management"
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-02-03T10:23:04.831Z",
+      "status": "backlog"
     }
   ],
   "projects": [
@@ -47,5 +60,5 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T10:22:39.272Z"
+  "lastUpdated": "2026-02-03T10:23:04.831Z"
 }
