@@ -159,7 +159,8 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T14:33:40.800Z",
-      "status": "backlog"
+      "status": "in_progress",
+      "sortOrder": 0
     }
   ],
   "projects": [
@@ -177,8 +178,16 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T14:33:40.800Z",
+  "lastUpdated": "2026-02-03T14:33:47.151Z",
   "activities": [
+    {
+      "type": "moved",
+      "actor": "michsindlinger",
+      "task": "JOIN Job Refresh – .NET / Vue.js",
+      "from": "backlog",
+      "to": "in_progress",
+      "time": "just now"
+    },
     {
       "type": "moved",
       "actor": "michsindlinger",
