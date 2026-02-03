@@ -115,8 +115,16 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T14:08:56.982Z",
-      "status": "in_progress",
-      "sortOrder": 0
+      "status": "review",
+      "sortOrder": 0,
+      "completedAt": "2026-02-03T15:09:00Z",
+      "comments": [
+        {
+          "author": "Gandalf",
+          "text": "✅ Slack-Nachricht \"Finaler test\" wurde an #claude-kumpel gesendet.",
+          "timestamp": "2026-02-03T15:09:00Z"
+        }
+      ]
     }
   ],
   "projects": [
@@ -134,7 +142,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T14:09:06.763Z",
+  "lastUpdated": "2026-02-03T15:09:00Z",
   "activities": [
     {
       "type": "moved",
