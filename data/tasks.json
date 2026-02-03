@@ -1,5 +1,21 @@
 {
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "template_1770113637907",
+      "title": "JOIN Job Refresh (alle 2 Wochen)",
+      "description": "⏰ REMINDER: JOIN Job Refresh fällig! Alle 2 Wochen sollten die Jobausschreibungen refresht werden (archivieren + neu erstellen), damit sie bei Bewerbern weiter oben erscheinen. Frage Mich via Slack ob der Refresh jetzt durchgeführt werden soll.",
+      "project": "hr-management",
+      "tags": [
+        "hr-management"
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-02-03T10:13:57.907Z",
+      "isTemplate": true,
+      "baseStatus": "backlog",
+      "executionCount": 0
+    }
+  ],
   "projects": [
     "default",
     {
@@ -15,5 +31,5 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-02T21:11:18Z"
+  "lastUpdated": "2026-02-03T10:13:57.907Z"
 }
