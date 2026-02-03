@@ -125,6 +125,19 @@
           "timestamp": "2026-02-03T15:09:00Z"
         }
       ]
+    },
+    {
+      "id": "task_1770127872291",
+      "title": "JOIN Job Refresh DRYRUN 2",
+      "description": "Original Aufgabe:\ndie Jobausschreibungen auf join.com sollen refresht werden (archivieren + neu erstellen), damit sie bei Bewerbern weiter oben erscheinen. \n\nDRYRUN:\nachtung, das ist nur ein Dryrun. Bitte nur alle Jobs auslesen und mir die Details im Slack schicken, welche genutzt werden würden, um die neuen Jobs zu erstellen.\n\nFrage Mich via Slack ob der DRYRUN jetzt durchgeführt werden soll.",
+      "project": "",
+      "tags": [
+        ""
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-02-03T14:11:12.291Z",
+      "status": "backlog"
     }
   ],
   "projects": [
@@ -142,7 +155,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T14:10:55.691Z",
+  "lastUpdated": "2026-02-03T14:11:12.291Z",
   "activities": [
     {
       "type": "moved",
