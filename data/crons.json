@@ -1,0 +1,15 @@
+{
+  "crons": [
+    {
+      "id": "fc319b01-f5b0-4d1e-95b2-5c770e6b37b5",
+      "name": "JOIN Job Refresh (alle 2 Wochen)",
+      "prompt": "⏰ REMINDER: JOIN Job Refresh fällig! Alle 2 Wochen sollten die Jobausschreibungen refresht werden (archivieren + neu erstellen), damit sie bei Bewerbern weiter oben erscheinen. Frage Mich via Slack ob der Refresh jetzt durchgeführt werden soll.",
+      "schedule": "0 22 1,15 * *",
+      "scheduleHuman": "0 22 1,15 * *",
+      "timezone": "Europe/Berlin",
+      "enabled": true,
+      "pending": true,
+      "createdAt": "2026-02-03T10:15:51.222Z"
+    }
+  ]
+}
