@@ -49,6 +49,19 @@
       "processingStartedAt": null,
       "processing": null,
       "completedAt": "2026-02-03T13:04:27.253Z"
+    },
+    {
+      "id": "task_1770125433664",
+      "title": "testnachricht 3",
+      "description": "Schicke mir in Slack eine Nachricht \"Hallo Mich das ist ein zweiter test zum dritten aml\"",
+      "project": "",
+      "tags": [
+        ""
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-02-03T13:30:33.664Z",
+      "status": "backlog"
     }
   ],
   "projects": [
@@ -66,7 +79,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T13:30:17.581Z",
+  "lastUpdated": "2026-02-03T13:30:33.664Z",
   "activities": [
     {
       "type": "moved",
