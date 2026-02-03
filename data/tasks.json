@@ -29,7 +29,8 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T10:22:39.272Z",
-      "status": "backlog"
+      "status": "backlog",
+      "sortOrder": 0
     },
     {
       "id": "task_1770114184831",
@@ -42,8 +43,10 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T10:23:04.831Z",
-      "status": "in_progress",
-      "sortOrder": 0
+      "status": "backlog",
+      "sortOrder": 1,
+      "processingStartedAt": null,
+      "processing": null
     }
   ],
   "projects": [
@@ -61,8 +64,16 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T10:23:13.787Z",
+  "lastUpdated": "2026-02-03T10:44:19.930Z",
   "activities": [
+    {
+      "type": "moved",
+      "actor": "michsindlinger",
+      "task": "tes slack nachricht",
+      "from": "in_progress",
+      "to": "backlog",
+      "time": "just now"
+    },
     {
       "type": "moved",
       "actor": "michsindlinger",
