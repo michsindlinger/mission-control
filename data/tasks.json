@@ -61,7 +61,8 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T13:10:14.550Z",
-      "status": "backlog"
+      "status": "in_progress",
+      "sortOrder": 0
     }
   ],
   "projects": [
@@ -79,8 +80,16 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T13:10:14.550Z",
+  "lastUpdated": "2026-02-03T13:12:14.546Z",
   "activities": [
+    {
+      "type": "moved",
+      "actor": "michsindlinger",
+      "task": "testnachricht 2",
+      "from": "backlog",
+      "to": "in_progress",
+      "time": "just now"
+    },
     {
       "type": "moved",
       "actor": "michsindlinger",
