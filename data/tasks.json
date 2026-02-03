@@ -93,8 +93,16 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T14:02:01.048Z",
-      "status": "in_progress",
-      "sortOrder": 0
+      "status": "review",
+      "sortOrder": 0,
+      "completedAt": "2026-02-03T14:04:33Z",
+      "comments": [
+        {
+          "author": "Gandalf",
+          "text": "✅ Task erledigt! Slack-Nachricht wurde gesendet.",
+          "timestamp": "2026-02-03T14:04:33Z"
+        }
+      ]
     }
   ],
   "projects": [
@@ -112,7 +120,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T14:02:10.556Z",
+  "lastUpdated": "2026-02-03T14:04:33Z",
   "activities": [
     {
       "type": "moved",
