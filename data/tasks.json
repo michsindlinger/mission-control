@@ -81,6 +81,19 @@
       "status": "done",
       "completedAt": "2026-02-03T14:01:03.291Z",
       "sortOrder": 0
+    },
+    {
+      "id": "task_1770127321048",
+      "title": "testnachricht 6",
+      "description": "Schicke mir in Slack eine Nachricht \"Hallo Mich das ist ein zweiter test\"",
+      "project": "",
+      "tags": [
+        ""
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-02-03T14:02:01.048Z",
+      "status": "backlog"
     }
   ],
   "projects": [
@@ -98,7 +111,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T14:01:03.291Z",
+  "lastUpdated": "2026-02-03T14:02:01.048Z",
   "activities": [
     {
       "type": "moved",
