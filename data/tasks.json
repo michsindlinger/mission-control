@@ -147,6 +147,19 @@
           "timestamp": "2026-02-03T14:14:16Z"
         }
       ]
+    },
+    {
+      "id": "task_1770129220800",
+      "title": "JOIN Job Refresh – .NET / Vue.js",
+      "description": "die Jobausschreibung '.NET / Vue.js' auf join.com soll refresht werden (archivieren + neu erstellen), damit sie bei Bewerbern weiter oben erscheint. \n\nBitte rufe alle Jobs ab, schaue nach dem '.NET / Vue.js' Job, lies ALLE Daten aus, archiviere den Job und erstelle anschließend einen identischen Job neu.\n\nALLE Anderen Jobs bleiben erhalten und werden nicht angefasst!",
+      "project": "",
+      "tags": [
+        ""
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-02-03T14:33:40.800Z",
+      "status": "backlog"
     }
   ],
   "projects": [
@@ -164,7 +177,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T14:14:16Z",
+  "lastUpdated": "2026-02-03T14:33:40.800Z",
   "activities": [
     {
       "type": "moved",
