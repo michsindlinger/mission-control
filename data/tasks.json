@@ -25,7 +25,7 @@
       "status": "scheduled",
       "scheduledAt": "2026-02-04T10:22:00.000Z",
       "priority": "medium",
-      "project": "system",
+      "project": "hr-management",
       "tags": [
         "scheduled"
       ],
@@ -48,5 +48,5 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T10:13:57.907Z"
+  "lastUpdated": "2026-02-03T10:22:02.539Z"
 }
