@@ -43,10 +43,11 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-03T10:23:04.831Z",
-      "status": "in_progress",
+      "status": "done",
       "sortOrder": 0,
       "processingStartedAt": null,
-      "processing": null
+      "processing": null,
+      "completedAt": "2026-02-03T13:04:27.253Z"
     }
   ],
   "projects": [
@@ -64,8 +65,16 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-03T13:01:12.418Z",
+  "lastUpdated": "2026-02-03T13:04:27.253Z",
   "activities": [
+    {
+      "type": "moved",
+      "actor": "michsindlinger",
+      "task": "tes slack nachricht",
+      "from": "in_progress",
+      "to": "done",
+      "time": "just now"
+    },
     {
       "type": "moved",
       "actor": "michsindlinger",
