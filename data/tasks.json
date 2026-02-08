@@ -181,8 +181,10 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-07T22:14:04.726Z",
-      "status": "in_progress",
-      "sortOrder": 0
+      "status": "backlog",
+      "sortOrder": 0,
+      "processingStartedAt": null,
+      "processing": null
     }
   ],
   "projects": [
@@ -200,8 +202,16 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-07T22:14:12.027Z",
+  "lastUpdated": "2026-02-08T04:41:58.806Z",
   "activities": [
+    {
+      "type": "moved",
+      "actor": "michsindlinger",
+      "task": "GMAIL Test",
+      "from": "in_progress",
+      "to": "backlog",
+      "time": "just now"
+    },
     {
       "type": "moved",
       "actor": "michsindlinger",
