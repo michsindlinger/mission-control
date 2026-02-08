@@ -8835,124 +8835,28 @@ ${learning.tags.map(t => `#${t}`).join(' ')}
                 return;
             }
             
-            const gatewayUrl = getGatewayUrl();
-            if (!gatewayUrl) {
-                // Save locally and show CLI command
-                const cron = STATE.crons?.find(c => c.id === cronId);
-                if (cron) {
-                    cron.name = name;
-                    cron.prompt = prompt;
-                    cron.schedule = schedule;
-                    cron.scheduleHuman = cronToHuman(schedule);
-                    cron.timezone = timezone;
-                    cron.project = project;
-                    cron.tags = tags;
-                    cron.enabled = enabled;
-                }
-                closeCronEditor();
-                renderCrons();
-                showToast('info', 'Gateway not available. Changes saved locally only.');
-                return;
+            // Update cron in state
+            const cron = STATE.crons?.find(c => c.id === cronId);
+            if (cron) {
+                cron.name = name;
+                cron.prompt = prompt;
+                cron.schedule = schedule;
+                cron.scheduleHuman = cronToHuman(schedule);
+                cron.timezone = timezone;
+                cron.project = project;
+                cron.tags = tags;
+                cron.enabled = enabled;
             }
             
-            try {
-                const response = await fetch(gatewayUrl + '/api/crons/' + cronId, {
-                    method: 'PATCH',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, prompt, schedule, timezone, project, tags, enabled })
-                });
-                
-                if (response.ok) {
-                    const cron = STATE.crons?.find(c => c.id === cronId);
-                    if (cron) {
-                        cron.name = name;
-                        cron.prompt = prompt;
-                        cron.schedule = schedule;
-                        cron.scheduleHuman = cronToHuman(schedule);
-                        cron.timezone = timezone;
-                        cron.project = project;
-                        cron.tags = tags;
-                        cron.enabled = enabled;
-                    }
-                    closeCronEditor();
-                    renderCrons();
-                    showToast('success', `Cron "${name}" updated`);
-                } else {
-                    showToast('error', 'Failed to save cron');
-                }
-            } catch (e) {
-                showToast('info', 'Gateway not available. Changes saved locally only.');
-                const cron = STATE.crons?.find(c => c.id === cronId);
-                if (cron) {
-                    cron.name = name;
-                    cron.prompt = prompt;
-                    cron.schedule = schedule;
-                    cron.scheduleHuman = cronToHuman(schedule);
-                    cron.timezone = timezone;
-                    cron.tags = tags;
-                    cron.enabled = enabled;
-                }
+            // Save to GitHub directly
+            const saved = await saveCronsToGitHub(`Update cron: ${name}`);
+            if (saved) {
                 closeCronEditor();
                 renderCrons();
+                showToast('success', `Cron "${name}" saved to GitHub`);
+            } else {
+                showToast('error', 'Failed to save cron to GitHub');
             }
-        }
-
-        // === TASK 3: TASK → CRON ===
-        function openTaskToCronWizard(taskId) {
-            const task = STATE.data.tasks.find(t => t.id === taskId);
-            if (!task) return;
-            
-            const dialog = document.createElement('div');
-            dialog.className = 'modal-overlay visible';
-            dialog.id = 'task-to-cron-wizard';
-            dialog.innerHTML = `
-                <div class="modal" style="max-width: 500px;">
-                    <div class="modal-header">
-                        <h2 class="modal-title">⏰ Convert to Cron</h2>
-                        <button class="modal-close" onclick="closeTaskToCronWizard()">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="steps" style="margin-bottom: 1rem;">
-                            <div class="step">
-                                <span class="step-number">1</span>
-                                <div class="step-content">
-                                    <div class="step-title">Choose Schedule Type</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div id="wizard-step-1">
-                            <div style="display: grid; gap: 0.5rem;">
-                                <button class="btn btn-secondary" style="justify-content: flex-start;" onclick="setScheduleType('daily')">
-                                    📅 Daily
-                                </button>
-                                <button class="btn btn-secondary" style="justify-content: flex-start;" onclick="setScheduleType('weekly')">
-                                    📆 Weekly
-                                </button>
-                                <button class="btn btn-secondary" style="justify-content: flex-start;" onclick="setScheduleType('monthly')">
-                                    🗓️ Monthly
-                                </button>
-                                <button class="btn btn-secondary" style="justify-content: flex-start;" onclick="setScheduleType('custom')">
-                                    ⚙️ Custom Cron Expression
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div id="wizard-step-2" style="display: none;">
-                            <div class="form-group">
-                                <label class="form-label">Time</label>
-                                <input type="time" class="form-input" id="wizard-time" value="08:00">
-                            </div>
-                            <div class="form-group" id="wizard-weekday-group" style="display: none;">
-                                <label class="form-label">Day of Week</label>
-                                <select class="form-input" id="wizard-weekday">
-                                    <option value="1">Monday</option>
-                                    <option value="2">Tuesday</option>
-                                    <option value="3">Wednesday</option>
-                                    <option value="4">Thursday</option>
-                                    <option value="5">Friday</option>
-                                    <option value="6">Saturday</option>
-                                    <option value="0">Sunday</option>
                                 </select>
                             </div>
                             <div class="form-group" id="wizard-monthday-group" style="display: none;">
