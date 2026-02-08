@@ -256,6 +256,19 @@
         }
       ],
       "completedAt": "2026-02-08T06:56:00Z"
+    },
+    {
+      "id": "task_1770570776227",
+      "title": "test cron job, send an email to michael.sindlinger@googlemail.com",
+      "description": "send a random message, maybe a joke, to michael.sindlinger@googlemail.com",
+      "project": "privat",
+      "tags": [
+        "privat"
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-02-08T17:12:56.227Z",
+      "status": "backlog"
     }
   ],
   "projects": [
@@ -273,7 +286,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-08T05:10:20.834Z",
+  "lastUpdated": "2026-02-08T17:12:56.227Z",
   "activities": [
     {
       "type": "moved",
