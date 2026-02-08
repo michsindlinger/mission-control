@@ -30,7 +30,7 @@
       "priority": "medium",
       "createdAt": "2026-02-03T10:22:39.272Z",
       "status": "done",
-      "sortOrder": 4,
+      "sortOrder": 5,
       "completedAt": "2026-02-03T13:08:26Z"
     },
     {
@@ -45,7 +45,7 @@
       "priority": "medium",
       "createdAt": "2026-02-03T10:23:04.831Z",
       "status": "done",
-      "sortOrder": 5,
+      "sortOrder": 6,
       "processingStartedAt": null,
       "processing": null,
       "completedAt": "2026-02-03T13:04:27.253Z"
@@ -62,7 +62,7 @@
       "priority": "medium",
       "createdAt": "2026-02-03T13:30:33.664Z",
       "status": "done",
-      "sortOrder": 6,
+      "sortOrder": 7,
       "completedAt": "2026-02-03T13:51:36.780Z",
       "processingStartedAt": null,
       "processing": null
@@ -94,7 +94,7 @@
       "priority": "medium",
       "createdAt": "2026-02-03T14:02:01.048Z",
       "status": "done",
-      "sortOrder": 2,
+      "sortOrder": 3,
       "completedAt": "2026-02-03T14:09:01.661Z",
       "comments": [
         {
@@ -116,7 +116,7 @@
       "priority": "medium",
       "createdAt": "2026-02-03T14:08:56.982Z",
       "status": "done",
-      "sortOrder": 3,
+      "sortOrder": 4,
       "completedAt": "2026-02-03T14:10:55.691Z",
       "comments": [
         {
@@ -182,7 +182,7 @@
       "priority": "medium",
       "createdAt": "2026-02-08T04:42:13.914Z",
       "status": "done",
-      "sortOrder": 1,
+      "sortOrder": 2,
       "completedAt": "2026-02-08T04:50:13.513Z",
       "processingStartedAt": null,
       "processing": null
@@ -198,8 +198,11 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-08T04:50:39.481Z",
-      "status": "in_progress",
-      "sortOrder": 0
+      "status": "done",
+      "sortOrder": 1,
+      "completedAt": "2026-02-08T04:56:15.394Z",
+      "processingStartedAt": null,
+      "processing": null
     }
   ],
   "projects": [
@@ -217,8 +220,16 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-08T04:50:56.426Z",
+  "lastUpdated": "2026-02-08T04:56:15.394Z",
   "activities": [
+    {
+      "type": "moved",
+      "actor": "michsindlinger",
+      "task": "GMAIL Test 3",
+      "from": "in_progress",
+      "to": "done",
+      "time": "just now"
+    },
     {
       "type": "moved",
       "actor": "michsindlinger",
