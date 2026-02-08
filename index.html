@@ -8838,65 +8838,29 @@ ${learning.tags.map(t => `#${t}`).join(' ')}
                 return;
             }
             
-            const gatewayUrl = getGatewayUrl();
-            if (!gatewayUrl) {
-                // Save locally and show CLI command
-                const cron = STATE.crons?.find(c => c.id === cronId);
-                if (cron) {
-                    cron.name = name;
-                    cron.prompt = prompt;
-                    cron.schedule = schedule;
-                    cron.scheduleHuman = cronToHuman(schedule);
-                    cron.timezone = timezone;
-                    cron.project = project;
-                    cron.tags = tags;
-                    cron.enabled = enabled;
-                }
-                closeCronEditor();
-                renderCrons();
-                showToast('info', 'Gateway not available. Changes saved locally only.');
-                return;
+            // Update cron in state
+            const cron = STATE.crons?.find(c => c.id === cronId);
+            if (cron) {
+                cron.name = name;
+                cron.prompt = prompt;
+                cron.schedule = schedule;
+                cron.scheduleHuman = cronToHuman(schedule);
+                cron.timezone = timezone;
+                cron.project = project;
+                cron.tags = tags;
+                cron.enabled = enabled;
             }
             
-            try {
-                const response = await fetch(gatewayUrl + '/api/crons/' + cronId, {
-                    method: 'PATCH',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, prompt, schedule, timezone, project, tags, enabled })
-                });
-                
-                if (response.ok) {
-                    const cron = STATE.crons?.find(c => c.id === cronId);
-                    if (cron) {
-                        cron.name = name;
-                        cron.prompt = prompt;
-                        cron.schedule = schedule;
-                        cron.scheduleHuman = cronToHuman(schedule);
-                        cron.timezone = timezone;
-                        cron.project = project;
-                        cron.tags = tags;
-                        cron.enabled = enabled;
-                    }
-                    closeCronEditor();
-                    renderCrons();
-                    showToast('success', `Cron "${name}" updated`);
-                } else {
-                    showToast('error', 'Failed to save cron');
-                }
-            } catch (e) {
-                showToast('info', 'Gateway not available. Changes saved locally only.');
-                const cron = STATE.crons?.find(c => c.id === cronId);
-                if (cron) {
-                    cron.name = name;
-                    cron.prompt = prompt;
-                    cron.schedule = schedule;
-                    cron.scheduleHuman = cronToHuman(schedule);
-                    cron.timezone = timezone;
-                    cron.tags = tags;
-                    cron.enabled = enabled;
-                }
+            // Save to GitHub directly (Mission Control crons are stored in crons.json)
+            const saved = await saveCronsToGitHub(`Update cron "${name}"`);
+            if (saved) {
                 closeCronEditor();
                 renderCrons();
+                showToast('success', `Cron "${name}" saved to GitHub`);
+            } else {
+                closeCronEditor();
+                renderCrons();
+                showToast('warning', `Cron "${name}" saved locally. GitHub sync failed.`);
             }
         }
 
@@ -9123,49 +9087,8 @@ ${learning.tags.map(t => `#${t}`).join(' ')}
                 return true;
             }
             
-            if (!gatewayUrl) {
-                // No Gateway available - save locally to GitHub
-                await createLocalCron();
-                return;
-            }
-            
-            try {
-                const response = await fetch(gatewayUrl + '/api/crons', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name: cronTitle,
-                        prompt: prompt,
-                        schedule: schedule,
-                        scheduleHuman: scheduleDesc,
-                        timezone: 'Europe/Berlin',
-                        enabled: true
-                    })
-                });
-                
-                if (response.ok) {
-                    const newCron = await response.json();
-                    STATE.crons = STATE.crons || [];
-                    STATE.crons.push(newCron);
-                    
-                    // Archive original task
-                    task.archived = true;
-                    task.archivedAt = new Date().toISOString();
-                    task.archivedReason = 'Converted to cron: ' + newCron.id;
-                    
-                    closeTaskToCronWizard();
-                    renderCrons();
-                    renderTasks();
-                    debouncedAutoSave(`Convert task "${task.title}" to cron`);
-                    showToast('success', `Created cron "${cronTitle}"`);
-                } else {
-                    showToast('error', 'Failed to create cron via Gateway');
-                }
-            } catch (e) {
-                // Gateway not reachable - fallback to local save
-                console.log('Gateway not reachable, saving locally:', e);
-                await createLocalCron();
-            }
+            // Always save to GitHub directly (Mission Control crons are stored in crons.json)
+            await createLocalCron();
         }
         
         function closeTaskToCronWizard() {
