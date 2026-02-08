@@ -268,7 +268,10 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-08T17:12:56.227Z",
-      "status": "backlog"
+      "status": "backlog",
+      "archived": true,
+      "archivedAt": "2026-02-08T17:13:40.865Z",
+      "archivedReason": "Converted to cron: 09987fe1-21f8-4283-b4ba-a5f881c08927"
     }
   ],
   "projects": [
