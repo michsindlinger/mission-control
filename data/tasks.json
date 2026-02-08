@@ -220,6 +220,19 @@
       "completedAt": "2026-02-08T05:09:43.236Z",
       "processingStartedAt": null,
       "processing": null
+    },
+    {
+      "id": "task_1770527412460",
+      "title": "GMAIL Test 5",
+      "description": "sende eine test email an michael@rockstardevelopers.de von michael.sindlinger@gmail.com. Inhatl: Das ist ein Test, nummer 5",
+      "project": "privat",
+      "tags": [
+        "privat"
+      ],
+      "subtasks": [],
+      "priority": "medium",
+      "createdAt": "2026-02-08T05:10:12.460Z",
+      "status": "backlog"
     }
   ],
   "projects": [
@@ -237,7 +250,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-08T05:09:43.237Z",
+  "lastUpdated": "2026-02-08T05:10:12.460Z",
   "activities": [
     {
       "type": "moved",
