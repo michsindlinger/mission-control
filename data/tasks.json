@@ -174,9 +174,9 @@
       "id": "task_1770525733914",
       "title": "GMAIL Test 2",
       "description": "sende eine test email an michael@rockstardevelopers.de von michael.sindlinger@gmail.com. Inhatl: Das ist ein Test",
-      "project": "undefined",
+      "project": "privat",
       "tags": [
-        "undefined"
+        "privat"
       ],
       "subtasks": [],
       "priority": "medium",
@@ -199,7 +199,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-08T04:42:13.915Z",
+  "lastUpdated": "2026-02-08T04:42:27.769Z",
   "activities": [
     {
       "type": "moved",
