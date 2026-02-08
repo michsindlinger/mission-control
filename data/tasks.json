@@ -181,9 +181,9 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-08T04:42:13.914Z",
-      "status": "review",
+      "status": "done",
       "sortOrder": 3,
-      "completedAt": "2026-02-08T04:50:13.513Z",
+      "completedAt": "2026-02-08T06:56:00Z",
       "processingStartedAt": null,
       "processing": null,
       "comments": [
@@ -205,9 +205,9 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-08T04:50:39.481Z",
-      "status": "review",
+      "status": "done",
       "sortOrder": 1,
-      "completedAt": "2026-02-08T04:56:15.394Z",
+      "completedAt": "2026-02-08T06:56:00Z",
       "processingStartedAt": null,
       "processing": null,
       "comments": [
@@ -246,7 +246,7 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-08T05:10:12.460Z",
-      "status": "review",
+      "status": "done",
       "sortOrder": 0,
       "comments": [
         {
@@ -254,7 +254,8 @@
           "text": "✅ E-Mail gesendet. Message ID: 19c3bcdf5c4966c8",
           "timestamp": "2026-02-08T06:50:00Z"
         }
-      ]
+      ],
+      "completedAt": "2026-02-08T06:56:00Z"
     }
   ],
   "projects": [
