@@ -4,14 +4,14 @@
       "id": "09987fe1-21f8-4283-b4ba-a5f881c08927",
       "name": "test cron job, send an email to michael.sindlinger@googlemail.com",
       "prompt": "send a random message, maybe a joke, to michael.sindlinger@googlemail.com",
-      "schedule": "0 8 * * *",
-      "scheduleHuman": "Daily at 08:00",
+      "schedule": "*/10 * * * *",
       "timezone": "Europe/Berlin",
       "enabled": true,
-      "pending": true,
+      "pending": false,
       "createdAt": "2026-02-08T17:13:40.865Z",
       "project": "undefined",
-      "tags": []
+      "tags": [],
+      "lastRunAt": "2026-02-08T17:27:42.679Z"
     },
     {
       "id": "fc319b01-f5b0-4d1e-95b2-5c770e6b37b5",
