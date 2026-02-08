@@ -261,7 +261,7 @@
       "id": "task_1770570776227",
       "title": "test cron job, send an email to michael.sindlinger@googlemail.com",
       "description": "send a random message, maybe a joke, to michael.sindlinger@googlemail.com",
-      "project": "privat",
+      "project": "undefined",
       "tags": [
         "privat"
       ],
@@ -289,7 +289,7 @@
       "color": "#3af259"
     }
   ],
-  "lastUpdated": "2026-02-08T17:12:56.227Z",
+  "lastUpdated": "2026-02-08T17:13:44.765Z",
   "activities": [
     {
       "type": "moved",
