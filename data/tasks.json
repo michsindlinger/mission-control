@@ -181,11 +181,18 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-08T04:42:13.914Z",
-      "status": "done",
+      "status": "review",
       "sortOrder": 3,
       "completedAt": "2026-02-08T04:50:13.513Z",
       "processingStartedAt": null,
-      "processing": null
+      "processing": null,
+      "comments": [
+        {
+          "author": "Friday",
+          "text": "✅ E-Mail gesendet. Message ID: 19c3bcdef22d991e",
+          "timestamp": "2026-02-08T06:50:00Z"
+        }
+      ]
     },
     {
       "id": "task_1770526239481",
@@ -198,11 +205,18 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-08T04:50:39.481Z",
-      "status": "done",
+      "status": "review",
       "sortOrder": 1,
       "completedAt": "2026-02-08T04:56:15.394Z",
       "processingStartedAt": null,
-      "processing": null
+      "processing": null,
+      "comments": [
+        {
+          "author": "Friday",
+          "text": "✅ E-Mail gesendet. Message ID: 19c3bcdf00f6d245",
+          "timestamp": "2026-02-08T06:50:00Z"
+        }
+      ]
     },
     {
       "id": "task_1770526599683",
@@ -232,8 +246,15 @@
       "subtasks": [],
       "priority": "medium",
       "createdAt": "2026-02-08T05:10:12.460Z",
-      "status": "in_progress",
-      "sortOrder": 0
+      "status": "review",
+      "sortOrder": 0,
+      "comments": [
+        {
+          "author": "Friday",
+          "text": "✅ E-Mail gesendet. Message ID: 19c3bcdf5c4966c8",
+          "timestamp": "2026-02-08T06:50:00Z"
+        }
+      ]
     }
   ],
   "projects": [
