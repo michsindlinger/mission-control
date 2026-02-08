@@ -21,13 +21,14 @@
       "enabled": true,
       "pending": false,
       "createdAt": "2026-02-08T11:43:00Z",
-      "project": "personal",
+      "project": "",
       "tags": [
         "email",
         "triage",
         "automation"
       ],
-      "lastRunAt": "2026-02-08T10:49:19.714Z"
+      "lastRunAt": "2026-02-08T10:49:19.714Z",
+      "scheduleHuman": "Every 30 minutes"
     }
   ]
 }
