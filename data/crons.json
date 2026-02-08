@@ -1,6 +1,19 @@
 {
   "crons": [
     {
+      "id": "09987fe1-21f8-4283-b4ba-a5f881c08927",
+      "name": "test cron job, send an email to michael.sindlinger@googlemail.com",
+      "prompt": "send a random message, maybe a joke, to michael.sindlinger@googlemail.com",
+      "schedule": "0 8 * * *",
+      "scheduleHuman": "Daily at 08:00",
+      "timezone": "Europe/Berlin",
+      "enabled": true,
+      "pending": true,
+      "createdAt": "2026-02-08T17:13:40.865Z",
+      "project": "undefined",
+      "tags": []
+    },
+    {
       "id": "fc319b01-f5b0-4d1e-95b2-5c770e6b37b5",
       "name": "JOIN Job Refresh (alle 2 Wochen)",
       "prompt": "⏰ REMINDER: JOIN Job Refresh fällig! Alle 2 Wochen sollten die Jobausschreibungen refresht werden (archivieren + neu erstellen), damit sie bei Bewerbern weiter oben erscheinen. Frage Mich via Slack ob der Refresh jetzt durchgeführt werden soll.",
@@ -31,17 +44,6 @@
       ],
       "lastRunAt": "2026-02-08T10:49:19.714Z",
       "scheduleHuman": "Daily at 08:00"
-    },
-    {
-      "id": "09987fe1-21f8-4283-b4ba-a5f881c08927",
-      "name": "test cron job, send an email to michael.sindlinger@googlemail.com",
-      "prompt": "send a random message, maybe a joke, to michael.sindlinger@googlemail.com",
-      "schedule": "*/10 * * * *",
-      "scheduleHuman": "*/10 * * * *",
-      "timezone": "Europe/Berlin",
-      "enabled": true,
-      "pending": true,
-      "createdAt": "2026-02-08T17:13:40.865Z"
     }
   ]
 }
