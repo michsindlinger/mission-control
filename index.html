@@ -1079,7 +1079,10 @@
                            location.protocol === 'file:';
             if (isLocal) return 'http://localhost:3033';
             
-            // 5. Return null - will trigger auto-probe
+            // 5. Default for GitHub Pages - use Tailscale Funnel
+            return 'https://macbook-pro-von-testadmin.tailee9e24.ts.net';
+            
+            // 6. Return null - will trigger auto-probe
             return null;
         }
         
