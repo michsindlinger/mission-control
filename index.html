@@ -8746,19 +8746,38 @@ ${learning.tags.map(t => `#${t}`).join(' ')}
                 
                 const [cronMin, cronHour, cronDay, cronMonth, cronWeekday] = parts;
                 
+                // Handle interval patterns like */30
+                const minInterval = cronMin.includes('/') ? parseInt(cronMin.split('/')[1]) : null;
+                const hourInterval = cronHour.includes('/') ? parseInt(cronHour.split('/')[1]) : null;
+                
                 // Parse fixed values from cron
-                const targetMin = cronMin !== '*' ? parseInt(cronMin) : null;
-                const targetHour = cronHour !== '*' ? parseInt(cronHour) : null;
+                const targetMin = (cronMin !== '*' && !cronMin.includes('/')) ? parseInt(cronMin) : null;
+                const targetHour = (cronHour !== '*' && !cronHour.includes('/')) ? parseInt(cronHour) : null;
                 const targetDay = cronDay !== '*' ? parseInt(cronDay) : null;
                 const targetWeekday = cronWeekday !== '*' ? parseInt(cronWeekday) : null;
                 
-                // Start from now, but set to target time if fixed
+                // Start from now
                 let checkDate = new Date(now);
-                if (targetMin !== null) checkDate.setMinutes(targetMin, 0, 0);
-                if (targetHour !== null) checkDate.setHours(targetHour);
                 
-                // If this time already passed today, start tomorrow
-                if (checkDate <= now) {
+                // For interval patterns (*/30), calculate next run from now
+                if (minInterval) {
+                    const currentMin = checkDate.getMinutes();
+                    const nextMin = Math.ceil((currentMin + 1) / minInterval) * minInterval;
+                    if (nextMin < 60) {
+                        checkDate.setMinutes(nextMin, 0, 0);
+                    } else {
+                        checkDate.setHours(checkDate.getHours() + 1, 0, 0, 0);
+                    }
+                } else if (targetMin !== null) {
+                    checkDate.setMinutes(targetMin, 0, 0);
+                }
+                
+                if (targetHour !== null) {
+                    checkDate.setHours(targetHour);
+                }
+                
+                // If this time already passed today, start tomorrow (only for fixed times)
+                if (checkDate <= now && !minInterval) {
                     checkDate.setDate(checkDate.getDate() + 1);
                 }
                 
@@ -8782,8 +8801,20 @@ ${learning.tags.map(t => `#${t}`).join(' ')}
                         }));
                     }
                     
-                    // Move to next day
-                    checkDate.setDate(checkDate.getDate() + 1);
+                    // Move to next day (or next interval)
+                    if (minInterval && runs.length === 0) {
+                        // For minute intervals, stay on same day but move to next interval
+                        const currentMin = checkDate.getMinutes();
+                        const nextMin = currentMin + minInterval;
+                        if (nextMin < 60) {
+                            checkDate.setMinutes(nextMin, 0, 0);
+                        } else {
+                            checkDate.setDate(checkDate.getDate() + 1);
+                            checkDate.setMinutes(0, 0, 0);
+                        }
+                    } else {
+                        checkDate.setDate(checkDate.getDate() + 1);
+                    }
                 }
                 
                 return runs.length > 0 ? runs[0] : 'Could not calculate next run';
