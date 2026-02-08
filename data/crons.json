@@ -17,7 +17,6 @@
       "name": "📧 Email Triage (30min)",
       "prompt": "📬 **Email Triage durchführen**\n\nPrüfe die ungelesenen E-Mails in michael.sindlinger@gmail.com:\n1. Identifiziere wichtige E-Mails (von Kunden, Partnern, dringende Anfragen)\n2. Markiere Newsletter/Werbung für Archivierung\n3. Erstelle bei Bedarf Tasks für Follow-ups\n4. Sende Zusammenfassung an Slack\n\n**Aktion:** Führe Email-Triage durch und dokumentiere Ergebnisse.",
       "schedule": "*/30 * * * *",
-      "scheduleHuman": "Every 30 minutes",
       "timezone": "Europe/Berlin",
       "enabled": true,
       "pending": false,
